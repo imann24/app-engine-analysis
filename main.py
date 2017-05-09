@@ -1,5 +1,6 @@
 # Author: Isaiah Mann
-# Description: Tests the response time of a given website
+# Description: Tests the average response time of a given website across a specified number of requests
+# Usage: python main.py [web page URL] [number of requests] [OPTIONAL: wait time between each request]
 
 import sys
 import requests
@@ -17,4 +18,4 @@ for n in range(timesToRun):
     if(waitBetweenRequest):
         sleep(waitBetweenRequest)
 avg = sum / timesToRun
-print("Average Response Time %.2f" % (avg))
+print("%d,%.2f" % (timesToRun, avg))
